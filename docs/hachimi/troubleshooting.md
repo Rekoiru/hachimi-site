@@ -229,12 +229,21 @@ Inside of that folder, create a folder named "hachimi". Finally, download [this 
 Open Hachimi's menu -> Config Editor and play with the virtual resolution multiplier to find which value works best.
 
 ### Tapping doesn't register, or causes the game to crash or freeze
+
+This issue has been fixed in Hachimi Edge version 0.15.1. Make sure you have [updated](faqs.md#how-do-i-update-the-game-or-hachimi-on-android).
+
+<details>
+<summary class="collapsible-header-sub">I'm experiencing this on a version newer than 0.15.1</summary>
+
 :::tip
 Turning off the GUI disables translation updates. You'll have to occasionally toggle it on & off again to do so.
 :::
 1. Make sure your translations are up to date. Let Hachimi update if you can and don't touch anything until it's done.
 1. Open Hachimi's menu -> Config Editor and select Disable Overlay (GUI).
     - To re-enable it, open Hachimi's `config.json` file in a text or JSON editor and change the `disable_gui` value from `true` back to `false`, then restart the game. This file is located in `android/media/jp.co.cygames.umamusume/hachimi` (might differ with phone brand).
+1. Please report the issue to Hachimi Edge devs on Discord or GitHub.
+</details>
+
 
 ### Patched successfully but no translations
 Make sure the translations are downloaded and up to date. Run the first time setup again.

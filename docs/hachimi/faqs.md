@@ -46,3 +46,7 @@ These are modes defined internally by the game, and not implemented by Hachimi. 
 - `ModeNormal` is the default. 
 - `Mode60FPS` seems to restore some physics movements when increasing framerate, but can still be a little buggy sometimes.
 - Both `SkipFrame` modes are unknown but seem to be broken.
+
+## How do I update the game or Hachimi on Android?
+Follow the [install steps](getting-started-jp.md#android) from step 4.
+You don't have to import the key again.
