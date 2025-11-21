@@ -4,7 +4,7 @@ Follow the guide for your platform below, then continue with [First Time Setup](
 
 ## Windows
 ::: danger
-Playing on Global after 2025/11/11? Follow the [Japanese guide](getting-started-jp.md) instead, pointing the installer at the global install location, and skipping the first time setup!  
+Playing on Global after 2025/11/11? Follow the [Japanese guide](getting-started-jp.md) instead, pointing the installer at the global install location (make sure to select Steam version)!  
 Only follow this section if your game version hasn't updated yet.
 :::
 
