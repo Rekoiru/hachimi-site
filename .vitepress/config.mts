@@ -144,7 +144,8 @@ const vitePressConfig: UserConfig = {
         nav: [
           { text: 'ホーム', link: '/ja/' },
           { text: 'スクリーンショット', link: '/ja/#screenshots' },
-          { text: 'ドキュメント', link: '/ja/docs' }
+          { text: 'ドキュメント', link: '/ja/docs' },
+          { text: 'クレジット', link: '/ja/credits' }
         ]
       }
     }
