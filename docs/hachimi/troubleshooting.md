@@ -223,7 +223,7 @@ If you *don't* have a Data Link password, you will need to uninstall the patched
 After that, you can repeat the patching process and then log in using the created Data Link password.
 Alternatively, you may log in to a Cygames ID to link your account data.
 
-### この端末でのプレイは許可されていません (You are not permitted to play on this device) error
+### You are not permitted to play on this device (この端末でのプレイは許可されていません) error
 
 #### Your device is rooted
  Make sure your connection is stable and that the device is passing at least **DEVICE_INTEGRITY** on the Play Integrity servers (you can verify this using the [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) app). If it passes, hiding root from the game using **Magisk's built-in DenyList** (enable *Enforce DenyList* if it doesn't work) should make it work. Other tools such as **Shamiko** may also do the trick.
