@@ -27,16 +27,19 @@ Steam is unaffected.
 <summary class="collapsible-header-sub">Manual install</summary>
 
 :::tip
-Only add the **file** extensions (`.exe`, `.dll`) when you rename if you see them on the original file names. If you don't, it means Windows is set to hide them, and your rename will end with `.exe.exe`, breaking the game. Does not apply to folders.
+Only add the file extensions if you see them on the originals. Windows can hide them, and your rename will then break the game. Doesn't apply to folders.
 :::
 
-::: tip
-Guide based on DMM. If you're using Steam, replace `umamusume.exe` with `UmamusumePrettyDerby.exe` in the steps below.
-:::
+### Steam
+1. Download the latest `hachimi.dll` from the [Releases page](https://github.com/kairusds/Hachimi-Edge/releases).
+1. Rename it to `cri_mana_vpx.dll` and put it in the [game install folder](faqs#how-do-i-find-the-game-install-folder).
+1. Download Ferns' `FunnyHoney.exe` from [here](https://codeberg.org/LeadRDRK/FunnyHoney).
+1. Rename it to `UmamusumePrettyDerby_Jpn.exe` and put it in the game install folder, overwriting the original.
 
-1. Refer to the "Configure the registry" section in [this article](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry) to enable DLL redirection. Restart your computer after you're done.
+### DMM
+1. Refer to the "Configure the registry" section in [this article](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry) to enable DLL redirection. **Restart** your computer after you're done.
 2. Download the latest `hachimi.dll` from the [Releases page](https://github.com/kairusds/Hachimi-Edge/releases).
-3. In the game install folder, create a new folder named `umamusume.exe.local` and move the downloaded DLL file there. Rename it to `UnityPlayer.dll`.
+3. In the [game install folder](faqs#how-do-i-find-the-game-install-folder), create a new folder named `umamusume.exe.local` and move the downloaded DLL file there. Rename it to `UnityPlayer.dll`.
 4. Download the latest `cellar.dll` from the [Cellar Releases page](https://github.com/Hachimi-Hachimi/Cellar/releases).
 5. Move it to `umamusume.exe.local` and rename it to `apphelp.dll`.
 </details>
