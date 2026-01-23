@@ -16,7 +16,7 @@ Change the "Physics update mode" setting to "Mode60FPS". This setting is availab
 ### Corrupted/jumbled textures or text 
 
 ::: tip
-If you are playing the **Global** version, you might have accidentally installed translations **not specicially made for Global**.
+If you are playing the **Global** version, you might have accidentally installed translations **not specifically made for Global**.
 To fix this, open the Hachimi menu, run the `First time setup` again to choose a compatible source or none, then restart the game.
 :::
 
@@ -105,8 +105,8 @@ When you want to re-enable Hachimi's overlay, open Hachimi's config file (config
 This seems to be a bug in the game itself, which Hachimi causes to trigger much more easily. Use `alt` + `enter` to toggle between fullscreen and windowed. This should let you continue. An official fix is presumably coming.
 
 ### DMM: Input registering at the wrong spot on the screen after the window is resized
-
-This is a known issue with Hachimi on the Japanese DMM version of the game (fix coming soon™). For now, just don't resize the window.
+~~This is a known issue with Hachimi on the Japanese DMM version of the game (fix coming soon™). For now, just don't resize the window.~~
+This bug has been fixed. Update Hachimi to v0.14.3 or later.
 
 ### DMM: Can't play certain games after installing Hachimi
 
@@ -130,7 +130,7 @@ It's strongly recommended to **keep `Resolution scaling` at its default value** 
 This is a bug in the game, not Hachimi. Some users can turn on Windows Sonic without adverse effects to fix it.
 
 ### Game stutters
-Make sure you don't have auto-translate on in the Hachimi settings. This only works when you have a translation server set up correctly, and will cause performance problems even then.
+Make sure you don't have auto-translate enabled in the Hachimi settings. This only works when you have a translation server set up correctly, and will cause performance problems even then.
 
 ### Error 501
 Both versions use the same data download directory name with different capitalization.
@@ -158,7 +158,7 @@ Global uses "Umamusume" while JP uses "umamusume".
 See [Error 501](#error-501) above.
 
 ### I/O error: Access is denied (os error 5)
-Something is using files you're trying to modify. Likely means you still have the game open while trying to(un)install Hachimi.
+Something is using files you're trying to modify. Likely means you still have the game open while trying to (un)install Hachimi.
 
 ### Installer I/O error: The system cannot find the file specified (os error 2)
 This is likely to occur on global due to some file name differences not yet accounted for. It shouldn't affect Hachimi and can be safely ignored.
@@ -226,10 +226,10 @@ Alternatively, you may log in to a Cygames ID to link your account data.
 ### You are not permitted to play on this device (この端末でのプレイは許可されていません) error
 
 #### Your device is rooted
- Make sure your connection is stable and that the device is passing at least **DEVICE_INTEGRITY** on the Play Integrity servers (you can verify this using the [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) app). If it passes, hiding root from the game using **Magisk's built-in DenyList** (enable *Enforce DenyList* if it doesn't work) should make it work. Other tools such as **Shamiko** may also do the trick.
+Make sure your connection is stable and that the device is passing at least **DEVICE_INTEGRITY** on the Play Integrity servers (you can verify this using the [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) app). If it passes, hiding root from the game using **Magisk's built-in DenyList** (enable *Enforce DenyList* if it doesn't work) should make it work. Other tools such as **Shamiko** may also do the trick.
 
 #### Your device is not rooted
- If this error message continues to show on your device, it may indicate an unstable connection to the Play Integrity servers, or that you need to use a **VPN** when launching the game. See the [Communication error](#communication-error-messages-when-attempting-to-start-the-game) section for more details.
+If this error message continues to show on your device, it may indicate an unstable connection to the Play Integrity servers, or that you need to use a **VPN** when launching the game. See the [Communication error](#communication-error-messages-when-attempting-to-start-the-game) section for more details.
 
 ### I/O error: Permission denied (os error 13)
 
@@ -244,9 +244,15 @@ Due to the new scoped storage introduced in Android 10, Hachimi can fail to crea
 
 Reboot your device and try launching the game again. If the error persists, ask for help in the Discord server.
 
-### Crashing after launch
+### Crashing after launch (specific devices)
 
-This might be needed for some devices and emulators.
+:::warning
+This is **NOT** related to the crashing issue that happens with an older Hachimi version (v0.14.1).  
+See [this guide](faqs.md#how-do-i-update-on-android) to update Hachimi.
+:::
+
+This might be needed for some Samsung devices and emulators.
+
 1. Follow [os error 13](#i-o-error-permission-denied-os-error-13) first, but don't launch the game yet.
 1. Download [this config file](https://files.leadrdrk.com/hachimi/android-compat/config.json) and put it inside the `hachimi` folder (make sure that it's called `config.json`).
 
@@ -258,8 +264,7 @@ See [os error 13](#i-o-error-permission-denied-os-error-13).
 Open Hachimi's menu -> Config Editor and play with the virtual resolution multiplier to find which value works best.
 
 ### Tapping doesn't register, or causes the game to crash or freeze
-
-This issue has been fixed in Hachimi Edge version 0.15.1. Make sure you have [updated](faqs.md#how-do-i-update-the-game-or-hachimi-on-android).
+This issue has been fixed in Hachimi Edge version 0.15.1. Make sure you have [updated](faqs.md#how-do-i-update-on-android).
 
 <details>
 <summary class="collapsible-header-sub">I'm experiencing this on a version newer than 0.15.1</summary>
@@ -280,8 +285,8 @@ Make sure the translations are downloaded and up to date. Run the first time set
 If during patching you see a message mentioning `libmain.so` you can try, in order until one works:
 1. Make sure you are on the latest Hachimi update.
 1. Force redownload Hachimi in the UmaPatcher Edge settings, then patch again.
-1. Clear Umapatcher Edge's app cache and data.
-1. Reinstall Umapatcher Edge.
+1. Clear UmaPatcher Edge's app cache and data.
+1. Reinstall UmaPatcher Edge.
 1. Restart your device into recovery mode and wipe the cache.
 <!-- Todo: How safe is the last one...? -->
 

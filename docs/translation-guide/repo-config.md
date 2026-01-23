@@ -124,7 +124,8 @@ A `"default"` key can also be specified, which will be used when no other type m
     "name_sp_mult": 1.0
 }
 ```
-Custom line lenghts for skills specifically. Used anywhere skills are displayed.  
+
+Custom line lengths for skills specifically. Used anywhere skills are displayed.  
 Values given as game-internal (pre-multiplied). Each value is optional, as is the dict itself.
 - `Short` refers to skills displayed in a double list without description, like a horsegirl's info screen.
 - `SP` refers to when skill points are rendered next to the name, as in upgrades.

@@ -76,8 +76,8 @@ You can also try the Shizuku option further down.
 1. Download and install the latest version of [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk).
 1. Prepare an installation package for the game, which can be:
     - **Split APK files:** A base APK file and one of the split config APKs (config.arm64_v8a, config.armeabi-v7a, etc.),
-    choose only one split config that's suitable for your device.
-    This is currently only used by the JP version.
+      choose only one split config that's suitable for your device.
+      This is currently only used by the JP version.
     - **Single APK file**: A full, fat APK file.
     - **XAPK file**: A ZIP file that contains the split APK files (with the extension renamed to XAPK).
     ::: warning

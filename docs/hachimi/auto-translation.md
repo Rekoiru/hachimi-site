@@ -7,6 +7,7 @@ Hachimi is able to automatically translate portions of the game via the Sugoi Of
 
 ### Caveats
 - The translation process is synchronous; the game will freeze while waiting for translations to be done. This will decrease over time as more things get translated and Hachimi is able to reload already translated data.
+- The tools mentioned above are intended to be run on a PC; on Android, you may just need to adjust `sugoi_url` to your PC's address running the translation software.
 
 ## How to use
 Open the Config Editor and enable one of the auto translation options (Auto translate stories/UI).
