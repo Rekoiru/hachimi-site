@@ -159,10 +159,8 @@ const vitePressConfig: UserConfig = {
   markdown: {
     anchor: {
       slugify: (str) => {
-        // based on default impl https://github.com/mdit-vue/mdit-vue/blob/v2.1.3/packages/shared/src/slugify.ts
         // Mimics GitHub format.
         return str
-          .normalize('NFKD')
           .trim()
           .toLowerCase()
           .replace(/[^\p{L}\p{N}\- ]/gu, "")
