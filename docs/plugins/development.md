@@ -1,7 +1,3 @@
----
-order: 3
----
-
 # Plugin development guide
 
 This guide will help you create plugins for Hachimi Edge. Plugins are dynamic libraries that extend Hachimi's functionality through a well-defined C-compatible API.
@@ -10,27 +6,27 @@ This guide will help you create plugins for Hachimi Edge. Plugins are dynamic li
 
 Plugins can be written in **any language** that can produce a C-compatible dynamic library (`.so` on Android, `.dll` on Windows). This includes:
 
-- **Rust** (recommended - examples in this guide use Rust)
-- **C/C++** 
-- **Zig** 
+- **Rust** (recommended — examples in this guide use Rust)
+- **C/C++**
+- **Zig**
 - **Go** (with cgo)
 - **Any other language with C FFI support**
 - **Assembly** (If you are a masochist)
 
-This guide uses **Rust** for examples because:
-- Hachimi itself is written in Rust
-- It's rusty
-
+This guide uses **Rust** for examples because Hachimi itself is written in Rust.
 However, the API is C-compatible, so you can use any language you prefer. Just ensure your `hachimi_init` function is exported with C calling convention.
 
 ## Prerequisites
 
 Before you start, you should have:
 
-- Experience with your chosen programming language
-- Familiarity with the game's structure
-- Development toolchain installed for your target platform
-- **Basic human functionality** not to make a malicious plugin that steals data or harms other players ( <span style="filter: blur(4px); transition: filter 0.3s ease;" onmouseover="this.style.filter='blur(0px)'" onmouseout="this.style.filter='blur(4px)'">I will fucking kill you.</span> )
+- Experience with your chosen programming language.
+- Familiarity with the game's structure.
+- Development toolchain installed for your target platform.
+
+::: warning
+Do not to make a malicious plugin that steals data or harms other players.
+:::
 
 ## Plugin structure
 
@@ -76,13 +72,13 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
     if version < 2 {
         return InitResult::Error;
     }
-    
+
     unsafe {
         VTABLE = Some(&*vtable);
     }
-    
+
     // Initialize your plugin here
-    
+
     InitResult::Ok
 }
 ```
@@ -105,12 +101,12 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
         // API version too old
         return InitResult::Error;
     }
-    
+
     // Store vtable safely
     unsafe {
         VTABLE = Some(&*vtable);
     }
-    
+
     InitResult::Ok
 }
 ```
@@ -358,13 +354,13 @@ type MenuSectionCallback = extern "C" fn(ui: *mut c_void, userdata: *mut c_void)
 extern "C" fn my_section_callback(ui: *mut c_void, _userdata: *mut c_void) {
     unsafe {
         let vtable = VTABLE.unwrap();
-        
+
         // Build your UI
         let heading = CString::new("My Plugin Settings").unwrap();
         (vtable.gui_ui_heading)(ui, heading.as_ptr());
-        
+
         (vtable.gui_ui_separator)(ui);
-        
+
         // Add widgets...
     }
 }
@@ -812,13 +808,11 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 }
 ```
 
-
 ## Best practices
 
 1. **Version Checking**: Always check the API version in `hachimi_init`
-2. **Error Handling**: Return `InitResult::Error` if initialization fails
-3. **Logging**: Use the logging API for debugging and user feedback
-
+1. **Error Handling**: Return `InitResult::Error` if initialization fails
+1. **Logging**: Use the logging API for debugging and user feedback
 
 ## Hooking and il2cpp examples
 
@@ -832,22 +826,22 @@ type UpdateFunc = unsafe extern "C" fn(*mut c_void);
 unsafe extern "C" fn my_update_hook(this: *mut c_void) {
     if let Some(vtable) = VTABLE {
         let (_, interceptor) = get_hachimi_and_interceptor();
-        
+
         // Get original function
         let trampoline = (vtable.interceptor_get_trampoline_addr)(
             interceptor,
             my_update_hook as *mut c_void
         );
         let original: UpdateFunc = std::mem::transmute(trampoline);
-        
+
         // Do something before
         let tag = CString::new("MyPlugin").unwrap();
         let msg = CString::new("Update called").unwrap();
         (vtable.log)(4, tag.as_ptr(), msg.as_ptr());
-        
+
         // Call original
         original(this);
-        
+
         // Do something after
     }
 }
@@ -883,7 +877,7 @@ unsafe fn example_il2cpp_usage() {
         // Get a class
     let image_name = CString::new("UnityEngine.CoreModule").unwrap();
         let image = (vtable.il2cpp_get_assembly_image)(image_name.as_ptr());
-        
+
     let namespace = CString::new("UnityEngine").unwrap();
     let class_name = CString::new("Object").unwrap();
         let klass = (vtable.il2cpp_get_class)(image, namespace.as_ptr(), class_name.as_ptr());

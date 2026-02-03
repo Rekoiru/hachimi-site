@@ -1,6 +1,5 @@
 ---
 title: About
-order: 1
 ---
 
 # Plugins
@@ -18,33 +17,35 @@ Plugins have access to a comprehensive API that allows them to:
 - **Hook and inspect IL2CPP**: Intercept functions and access Unity IL2CPP classes, methods, and fields
 - **Add GUI Elements**: Register menu items, sections, and show notifications in Hachimi's built-in GUI
 - **Android DEX Loading**: Load and execute Java/Kotlin code on Android (API v2+)
-- ...**and much more**
+- **…and much more.**
 
-## Safety considerations
+## Safety considerations ⚠️
 
-::: danger <span style="color: red;">SECURITY WARNING</span>
-**Only install plugins from sources you completely trust!**
-
+Never install plugins from unknown sources or untrusted developers.  
 Plugins run with full access to the game process. Malicious plugins can:
-- Steal your game account credentials and session tokens
-- Modify game data in ways that could result in account bans
-- Cause game crashes or data corruption
-- Send your game data to external servers
-- Execute arbitrary code within the game's permissions
-- **On Windows**: Have FULL ADMINISTRATOR ACCESS to your entire system (the game requires admin to run, so plugins always run as admin - they can install malware, modify system files, access all your data, etc.)
 
-**Never install plugins from unknown sources or untrusted developers. Windows plugins are EXTREMELY DANGEROUS as they always run with full administrator privileges and can do anything to your system.**
+- Steal your game account credentials and session tokens.
+- Modify game data in ways that could result in account bans.
+- Cause game crashes or data corruption.
+- Send your game data to external servers.
+- Execute arbitrary code within the game's permissions.
+
+::: danger ⚠️ CRITICAL SECURITY WARNING
+**On Windows, plugins have FULL ADMINISTRATOR ACCESS to your entire system due to the game running with admin privileges. They can install malware, modify system files, access all your data, etc.**
 :::
 
 Before installing a plugin, consider:
 
-- **Source Trust**: Only use plugins from developers you trust
-- **Community Verification**: Check if the plugin has been reviewed by the community
+- **Source trust**: Only use plugins from developers you trust.
+- **Community verification**: Check if the plugin has been reviewed by the community.
+- **Update risk**: Previously trusted plugins could become malicious over time.
+
+The Hachimi Edge developers cannot verify third-party plugins and will not be responible for any issues or damage caused by your use of them.
 
 ## Available plugins
-
+<!-- List plugins here. -->
 
 ## Next steps
 
-- **For Users**: Learn [how to install plugins](installation.md)
-- **For Developers**: Learn [how to create plugins](development.md)
+- **For Users**: [Learn how to install plugins](installation.md).
+- **For Developers**: [Learn how to create plugins](development.md).
