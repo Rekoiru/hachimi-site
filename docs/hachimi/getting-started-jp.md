@@ -70,8 +70,8 @@ If you have the *unpatched* game installed, you must uninstall it first. The pat
 :::
 
 ::: tip
-On Xiaomi devices without HyperOS, try disabling MIUI Optimizations before installing.
-You can also try the Shizuku option further down.
+On Xiaomi devices without HyperOS, we recommend the Shizuku option further down.
+You can also try disabling MIUI Optimizations before installing.
 :::
 
 1. If you used non-Edge UmaPatcher before, open its settings page and **export the signing key**. Keep it safe, you might need it again later.
