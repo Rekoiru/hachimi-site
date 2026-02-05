@@ -7,6 +7,10 @@ File konfigurasi bisa ditemukan di lokasi berikut:
 - Windows: `[Folder instalasi game]\hachimi\config.json`
 - Android: `/sdcard/Android/media/jp.co.cygames.umamusume/hachimi/config.json`
 
+::: warning PERINGATAN
+Mengedit file ini dengan editor teks biasa bisa menyebabkan kerusakan file. Harap gunakan editor teks yang mumpuni seperti Acode/QuickEdit (Android) atau Notepad++ (Windows).
+:::
+
 **Catatan:** Beberapa opsi tidak tersedia di Editor konfig dan harus ditambahkan secara manual.
 
 - `debug_mode`: Menentukan apakah mode debug diaktifkan atau tidak. Saat ini hanya mengaktifkan/menonaktifkan debug logging.
@@ -16,11 +20,18 @@ File konfigurasi bisa ditemukan di lokasi berikut:
 - `target_fps`: FPS target dari game. Jika tidak diatur, Hachimi tidak akan mencoba mengganti FPS game. Tidak berpengaruh jika `vsync_count` diatur.
 - `open_browser_url`: URL default yang dibuka saat meluncurkan browser dalam game dari GUI. Default: `https://www.google.com/`
 - `virtual_res_mult`: Pengali resolusi virtual. Jika perangkatmu mampu, nilai 1.5 atau 2 bagus; lebih tinggi dari itu mungkin berlebihan. Bisa diterapkan tanpa menutup game dengan melakukan "Restart ringan".
+- `gui_scale`: Mengubah ukuran GUI bawaan. Default: `1.0`.
+- `render_scale`: Pengali skala resolusi render internal. Nilai lebih tinggi membuat lebih tajam tetapi mengurangi performa game. Default: `1.0`.
+- `msaa`: Mengubah level MSAA (anti-aliasing) yang digunakan render game. Nilai lebih tinggi membuat tepi lebih mulus tetapi mengurangi performa.
+- `aniso_level`: Mengubah level filter anisotropik (*anisotropic filtering*) untuk tekstur. Meningkatkan kejelasan tekstur tapi meningkatkan penggunaan GPU.
 - `translation_repo_index`: URL indeks repo terjemahan. Digunakan oleh updater terjemahan.
 - `skip_first_time_setup`: Menentukan apakah melewati setup pertama saat startup atau tidak. Secara otomatis diset `true` setelah dialog setup pertama ditutup.
 - `disable_auto_update_check`: Menonaktifkan pemeriksaan update otomatis saat startup.
 - `disable_translations`: Menonaktifkan fitur terjemahan.
+- `disable_skill_name_translation`: Menonaktifkan terjemahan nama skill dengan membiarkan translasi tetap aktif.
+- `meta_index_url`: URL indeks meta (meta index URL) yang digunakan untuk mengambil repositori yang tersedia.
 - `ui_scale`: Faktor skala UI. Default: `1.0` (tanpa skala).
+- `hide_ingame_ui_hotkey`: Mengaktifkan tombol pintas (*hotkey*) internal untuk menyembunyikan antarmuka (UI) game.
 - `graphics_quality`: Nilai yang mungkin: `Default`, `Toon1280`, `Toon1280x2`, `Toon1280x4`, `ToonFull`, `Max`.
 - `story_choice_auto_select_delay`: Waktu tunda pemilihan (dalam detik) saat menggunakan mode auto di cerita. Default: `0.75` detik.
 - `story_tcps_multiplier`: Pengali kecepatan teks cerita ("jumlah karakter per detik seperti mesin ketik"). Default: `1.0`
@@ -28,11 +39,14 @@ File konfigurasi bisa ditemukan di lokasi berikut:
 - `ipc_listen_all`: Menerima perintah IPC dari perangkat lain di jaringan. **Jangan aktifkan opsi ini jika kamu tidak membutuhkannya.**
 - `force_allow_dynamic_camera`: Memaksa game untuk mengizinkan pemilihan kamera dinamis (POV) di semua jenis balapan.
 - `live_theater_allow_same_chara`: Memaksa game untuk mengizinkan memilih karakter yang sama berkali-kali untuk formasi konser live. Juga menonaktifkan penyimpanan formasi otomatis. **Jangan mencoba menyimpan formasi yang diduplikasi secara manual.**
+- `physics_update_mode`: Mengubah pembaruan fisik karakter game. Nilai yang mungkin: `ModeNormal`, `Mode60FPS`, `SkipFrame` dan `SkipFramePostAlways`.
+- `ui_animation_scale`: Mengubah kecepatan animasi UI. Default: `1.0`.
 - `sugoi_url`: URL ke Sugoi Offline Translator atau server terjemahan kompatibel untuk terjemahan otomatis. Tidak perlu diatur jika kamu menggunakan setup Sugoi standar. Default: `http://127.0.0.1:14366`
 - `auto_translate_stories`: Memungkinkan penerjemahan cerita melalui penerjemah otomatis.
 - `auto_translate_localize`: Memungkinkan penerjemahan teks UI melalui penerjemah otomatis. Umumnya TIDAK disarankan karena kebanyakan penerjemah tidak menjaga line break atau tag format dengan benar.
+- `disabled_hooks`: Menonatifkan hook manual. Jangan mengubah opsi ini, karena fungsinya hanya sebagai alat bantu debug untuk memecahkan masalah kompatibilitas.
 
-### Hanya untuk Windows
+## Hanya untuk Windows
 
 - `vsync_count`: Jumlah VSync. Atur ke 1 agar sesuai dengan refresh rate monitor kamu. Lihat [dokumentasi Unity](https://docs.unity3d.com/ScriptReference/QualitySettings-vSyncCount.html) untuk info lebih lanjut.
 - `load_libraries`: Daftar library yang dimuat saat startup. Bisa digunakan untuk memuat mod lain. Contoh: `["applejuicer.dll", "banana.dll"]`
@@ -42,3 +56,4 @@ File konfigurasi bisa ditemukan di lokasi berikut:
 - `resolution_scaling`: Mode scaling resolusi. Nilai yang mungkin: `Default`, `ScaleToScreenSize`, `ScaleToWindowSize`. Gunakan `ScaleToScreenSize` (disarankan) atau `ScaleToWindowSize` ketika menggunakan `auto_full_screen` di layar dengan resolusi lebih tinggi dari 1080p, jika tidak konten game tidak akan diskalakan dengan benar.
 - `block_minimize_in_full_screen`: Memblokir minimisasi saat layar penuh. Hanya boleh digunakan dengan `FullScreenWindow`.
 - `window_always_on_top`: Menjaga jendela game tetap di atas jendela lain.
+- `disable_gui_once`: Menonaktifkan GUI bawaan hanya untuk peluncuran berikutnya. Secara otomatis akan diatur ulang kembali ke `false` setelah startup dan memaksa pengaturan `disable_gui: true` satu kali. Hal ini memungkinkan kamu untuk melakukan pembelian dari Steam *Store*.

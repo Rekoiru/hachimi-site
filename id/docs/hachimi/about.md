@@ -12,18 +12,19 @@ Mod terjemahan dan peningkatan game UM:PD.
 
 ## Fitur
 
-- **Pemformatan teks canggih:** Hachimi hadir dengan fitur terjemahan canggih yang membuat hasil terjemahan terasa lebih alami (bentuk jamak, angka urutan, dll.) serta mencegah kerusakan pada UI. Juga mendukung penerjemahan sebagian besar komponen dalam game; tanpa perlu patching aset manual!
+- **Pemformatan teks canggih:** Hachimi hadir dengan fitur terjemahan canggih yang membuat hasil terjemahan terasa lebih alami (bentuk jamak, angka urutan, dll.) serta mencegah kerusakan pada UI.
 
-    **Menerjemahkan sebagian besar komponen dalam game**: Tidak diperlukan patching aset manual! Komponen yang didukung:
+- **Menerjemahkan sebagian besar komponen dalam game**: Tidak diperlukan patching aset manual!
   - Teks UI
-  - master.mdb (nama skill, deskripsi skill, dll.)
-  - Cerita balapan
-  - Cerita utama/Dialog beranda
+  - Teks dinamis dalam game dari master.mdb (nama skill, deskripsi skill, dll.)
+  - Dialog game (Cerita utama, interaksi beranda, cerita karakter, dll.)
   - Lirik lagu
-  - Penggantian tekstur
-  - Penggantian sprite atlas
+  - Penggantian tekstur & sprite atlas
+  - Penggantian video
+  - Penyesuaian objek internal game
+  - Opsi teks Hashed (fallback)
 
-Selain itu, Hachimi tidak hanya menyediakan fitur terjemahan untuk satu bahasa, ia dirancang agar sepenuhnya bisa dikonfigurasi untuk bahasa apa pun.
+Selain itu, Hachimi tidak hanya menyediakan fitur terjemahan untuk satu bahasa, ia dirancang agar sepenuhnya bisa dikonfigurasi untuk berbagai bahasa.
 
 - **Setup mudah:** Tinggal pasang dan mainkan. Semua setup dilakukan di dalam game itu sendiri, tanpa aplikasi eksternal.
 - **Pembaruan terjemahan otomatis:** pembaruan terjemahan bawaan memungkinkanmu tetap bermain normal saat update berlangsung, lalu memuat ulang langsung di dalam game setelah selesai tanpa perlu restart game!

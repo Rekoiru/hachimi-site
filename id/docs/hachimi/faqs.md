@@ -18,7 +18,7 @@ Tidak. Cukup buka kembali game dan akan ada permintaan untuk mengunduh ulang dar
 
 ## Apa itu file `.tl_repo_cache` di folder Hachimi saya? Apakah bisa dimakan?
 
-Tidak. File itu digunakan untuk melacak status terkini file terjemahan demi pembaruan inkremental berikutnya. Jangan ubah secara manual atau hapus file tersebut.
+Tidak. File itu digunakan untuk melacak status terkini file terjemahan demi pembaruan berkala berikutnya. Jangan ubah secara manual atau hapus file tersebut.
 
 ## Apakah ada versi atau mod lain untuk perangkat Apple (iOS)?
 
@@ -36,7 +36,7 @@ Hachimi dan alat serupa melanggar ketentuan layanan/*terms of services* (TOS). K
 
 Ya, tetapi kamu perlu menggunakan solusi tambahan jika memakai versi DMM. Lihat [langkah-langkah ini](/id/docs/hachimi/troubleshooting.md#error-501).
 
-## Apa perbedaan antara Mode Pembaruan Fisik?
+## Apa perbedaan antara Mode *Update* Fisik?
 
 Mode ini didefinisikan secara internal oleh game, dan tidak diimplementasikan oleh Hachimi. Sedikit yang diketahui tentangnya.
 
@@ -46,22 +46,42 @@ Mode ini didefinisikan secara internal oleh game, dan tidak diimplementasikan ol
 
 ## Bagaimana saya memperbarui di Android?
 
-### Game / Hachimi
+::: info
+Menghapus game hanya diperlukan untuk instalasi pertama kali, bukan untuk pembaruan jenis apapun.
+:::
 
-Ikuti [Langkah install](/id/docs/hachimi/getting-started.md#android) dari langkah ke-4.
-Kamu tidak perlu mengimpor *key* lagi. Saat memperbarui Hachimi, kamu cukup menginstal ulang versi game saat ini jika masih memiliki filenya.
+### Game
+
+Jika ada notifikasi di dalam game untuk memperbarui dari Play Store berarti kamu perlu memperbarui game itu sendiri dengan mengunduh paket instalasi terbaru. Kemudian kamu harus menginstalnya melalui UmaPatcher, yang secara otomatis akan menerapkan rilis Hachimi Edge terbaru yang tersedia.
+
+Ikuti [panduan instalasi](/id/docs/hachimi/getting-started.md#android-jp) mulai dari langkah ke-4.
+
+### Hachimi
+
+Ketika versi baru Hachimi Edge dirilis, kamu bisa memilih untuk menginstalnya agar mendapatkan fitur baru atau perbaikan. Kamu **tidak harus** melakukannya segera. Melakukan pembaruan ini memerlukan proses penambalan ulang (*re-patching*).
+
+Ikuti [panduan instalasi](/id/docs/hachimi/getting-started.md#android-jp) mulai dari langkah ke-5 hanya untuk menginstal ulang versi game saat ini, atau mulai dari langkah ke-4 jika kamu sudah tidak memiliki paket instalasi.
 
 ### UmaPatcher
 
+Memperbarui UmaPatcher hanya diperlukan dalam kasus tertentu, seperti saat kamu menghadapi masalah instalasi. Tidak ada pengaruh apa pun di dalam game jika melakukan pembaruan ini."
+
 1. Jika kamu belum pernah melakukannya, Pengaturan -> Ekspor *signing key*.
 1. Uninstall UmaPatcher.
-1. Unduh & install UmaPatcher terbaru.
-1. Pengaturan -> Impor *signing key*.
+1. Ikuti [panduan instalasi](/id/docs/hachimi/getting-started.md#android-jp) mulai dari langkah ke-3, sesuai kebutuhan di kasus yang kamu alami.
 
 ## Saya mematikan GUI/Overlay Hachimi, bagaimana cara menyalakannya kembali?
 
 Pertama-tama, kemungkinan kamu melakukan ini sebagai solusi sementara di Android. Masalah tersebut sudah diperbaiki sejak v0.15.1, jadi pastikan kamu telah memperbarui ke Hachimi Edge terbaru.
 
-Buka file konfigurasi Hachimi (config.json) dengan editor teks dan ubah nilai `disable_gui` dari `true` menjadi `false`, lalu mulai ulang game. File konfigurasi ini berada di folder `hachimi` dalam folder instalasi game. Pada Android, lokasinya adalah `android/media/jp.co.cygames.umamusume` (bisa berbeda tergantung merek ponsel).
+Buka file konfigurasi Hachimi (`config.json`) dengan editor teks dan ubah nilai `disable_gui` dari `true` menjadi `false`, lalu mulai ulang game. File konfigurasi ini berada di folder `hachimi` dalam [folder instalasi game](faqs#bagaimana-cara-menemukan-folder-instalasi-game)
 
-Jika kamu merasa tidak nyaman dengan ini atau mengalami masalah, aman juga untuk menghapus file konfigurasi tersebut. Hachimi akan membuat ulang file default
+Jika kamu merasa tidak nyaman dengan cara ini atau mengalami masalah, aman untuk menghapus file konfigurasi tersebut. Hachimi akan membuat ulang file default.
+
+## Bagaimana cara menemukan folder instalasi game?
+
+**Steam**: Klik kanan di game Steam -> *Manage* -> *Browse local files*
+
+**DMM**: Klik titik 3 di nama game di DMM -> 🛈 ikon -> 📁 ikon  
+
+**Android**: Tidak bisa diakses, tapi beberapa data terdapat di `Android/media/jp.co.cygames.umamusume` (mungkin berbeda di setiap merek hp)

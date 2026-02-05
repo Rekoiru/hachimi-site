@@ -1,8 +1,10 @@
-# Permasalahan
+# Pemecahan masalah
+
+Masalah yang telah diketahui beserta solusinya tercantum di sini. Periksa bagian Umum terlebih dahulu, dilanjutkan dengan bagian platform kamu, dan terakhir [apa yang harus dilakukan jika masalah kamu tidak tercantum di sini](#masalah-saya-tidak-ada-di-daftar-ini) pada bagian bawah.
 
 [[toc]]
 
-## General
+## Umum
 
 ### Muncul pesan "*Communication error*" saat mencoba memasuki game
 
@@ -18,7 +20,7 @@ Ubah pengaturan "Mode update fisik" menjadi "Mode60FPS". Pengaturan ini tersedia
 
 ### Tekstur atau teks yang rusak/berantakan
 
-::: Tip
+::: tip
 Jika kamu memainkan versi Global, mungkin kamu secara tidak sengaja memasang terjemahan yang tidak dibuat khusus untuk Global.
 Untuk memperbaikinya, buka menu Hachimi, jalankan `Setup pertama kali` untuk memilih sumber yang kompatibel atau tidak memilih apa pun, lalu *restart* game
 :::
@@ -28,7 +30,7 @@ Hal ini terjadi karena ada ketidaksesuaian antara tekstur sprite game dengan tek
 1. Cobalah memperbarui terjemahan dari menu. Jika pembaruan ditemukan, *restart* game setelah selesai.
     - Di Android/beberapa perangkat, kamu "mungkin" perlu menghapus folder `atlas` agar pembaruan bisa berjalan dengan benar.
 1. Jika tidak ditemukan pembaruan, berarti sumber terjemahan kamu sudah usang. Tunggu pembaruan, atau periksa langsung ke sumbernya
-    - <small>Jika waktunya sudah mendekati pembaruan game, para pengelola kemungkinan besar sedang mengerjakannya. Mohon periksa terlebih dahulu apakah mereka sudah mengetahuinya sebelum menghubungi.</small>
+    - Jika waktunya sudah mendekati pembaruan game, para pengelola kemungkinan besar sedang mengerjakannya. Mohon periksa terlebih dahulu apakah mereka sudah mengetahuinya sebelum menghubungi.
 1. Sumber terjemahan kamu mungkin sepenuhnya tidak aktif. Ini berarti kamu masih menggunakan sumber lama dari Hachimi asli. Pastikan kamu menggunakan Hachimi Edge, lalu buka menunya dan jalankan kembali `Setup pertama kali`.
 1. Daftar sumber itu sendiri bisa saja sudah usang, terutama jika kamu melakukan *upgrade* langsung dari Hachimi lama. kamu bisa menggunakan `Kembalikan semula` untuk mengatur ulang ke versi terbaru yang di-*bundle*.
     - ⚠️ Peringatan: ini akan me-*reset* semua pengaturan.  
@@ -41,7 +43,6 @@ Terjemahan disediakan oleh para relawan di komunitas yang meluangkan waktu merek
 
 ### Lirik berganti bahasa secara acak
 
-~~Sayangnya, ini adalah bug yang belum terpecahkan akibat pembaruan game. Kami sedang mengerjakannya.~~
 Bug ini telah diperbaiki. Perbarui Hachimi ke v0.15.1 atau yang lebih baru.
 
 ### Game tidak bisa dimuat saat melewati layar pembuka
@@ -49,37 +50,35 @@ Bug ini telah diperbaiki. Perbarui Hachimi ke v0.15.1 atau yang lebih baru.
 Jika game `macet/stuck` di layar pembuka, lihat [Error 501](#error-501).  
 Jika kamu bisa melihat layar pembuka tetapi game *crash* setelahnya, lihat [Game tidak mau mulai setelah menginstal Hachimi.](#game-tidak-mau-mulai-setelah-menginstal-hachimi).
 
+### Pesan "Akun dibatasi"
+
+Yaudah berarti kamu di-*banned*.
+
 ### Latar belakang dalam game mengecil / ada garis putih di tepi
 
 Buka menu Hachimi -> Editor konfig dan reset `kelipatan resolusi virtual` ke 1.
 Jika masih tidak membantu, coba sesuaikan sampai terlihat baik.
-
-### Masalah saya tidak tercantum di halaman ini
-
-Copot Hachimi menggunakan installer. Cobalah gunakan installer yang sama dengan versi saat ini, tetapi versi terbaru juga seharusnya berfungsi dengan baik.
-Jika kamu memiliki beberapa versi game terpasang, pastikan kamu menghapus dari jalur yang benar. Lalu pasang kembali Hachimi Edge terbaru.
-Jika itu tidak berhasil, kamu bisa bertanya di kanal #help pada [Discord Hachimi](https://discord.gg/hachimimod) dan jelaskan dengan jelas masalah kamu serta apa yang sudah kamu coba.
 
 ## Windows
 
 ### Runtime error saat memulai
 
 Artinya kamu menggunakan versi Hachimi lama yang rusak setelah pembaruan game pada 2025/09/24 (JP) dan 2025/11/11 (Global).
-[Install Hachimi Edge](getting-started.md).
+[Pasang Hachimi Edge](getting-started.md).
 
-Jika kamu sudah menggunakan Edge, coba install ulang ke versi terbaru.
+Jika kamu sudah menggunakan Edge, coba instal ulang ke versi terbaru.
 
 ### Game tidak mau mulai setelah menginstal Hachimi
 
-::: peringatan
+::: warning PERINGATAN
 Beberapa kernel-level anti-cheat (seperti Vanguard, yang digunakan di Valorant dan League of Legends) mencegah Hachimi meluncurkan game dengan benar. Pastikan mereka tidak berjalan di komputer kamu, lalu coba lagi.
 :::
 
 - Pastikan kamu menginstal versi Hachimi yang benar untuk versi game kamu (Jepang atau lainnya). Kamu bisa menemukan yang tepat di laman [Memulai](getting-started.md).
-- Mulai ulang komputer kamu setelah installer mengaktifkan pengalihan DotLocal.  
+- Mulai ulang komputer kamu setelah *installer* mengaktifkan pengalihan DotLocal.  
   **Klik "Restart" Di menu *shutdown*, jangan hanya mematikan lalu menyalakannya lagi..**
 - Jika kamu menggunakan DMM, coba mulai ulang DMM Launcher atau paksa agar selalu *"run as administrator"*.
-- Jika kamu menggunakan Steam, pembaruan game dapat mengganti beberapa file yang telah dimodifikasi. Instal ulang Hachimi menggunakan installer
+- Jika kamu menggunakan Steam, pembaruan game bisa mengganti beberapa file yang telah dimodifikasi. Instal ulang Hachimi menggunakan *installer*
 - Buka folder instalasi game, klik kanan file exe game, buka `Properties`, lalu coba satu atau lebih opsi berikut secara berurutan:
   - Nyalakan `Disable fullscreen optimizations` dibawah tab *Compatibility*.
   - Buka `Change high DPI settings`, Nyalakan `High DPI scaling override`, dan atur ke `Application`.
@@ -89,16 +88,22 @@ Beberapa kernel-level anti-cheat (seperti Vanguard, yang digunakan di Valorant d
     TODO: add more details about weird edge cases like old unsupported versions of CarrotJuicer?
 -->
 
-### Installer: "Code execution cannot proceed / VCRUNTIME" error
+### Game berhenti berjalan
 
-Install [VC++ redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) terbaru sesuai dengan arsitektur perangkat kamu. Jika kamu tidak yakin, 99% kemungkinan itu `x64`.
+Jika sebelumnya Hachimi berjalan dengan baik, kemungkinan besar berarti game telah diperbarui dan mengganti beberapa file yang telah dimodifikasi.
+
+Cukup instal ulang Hachimi.
+
+### *Installer* : muncul eror "Code execution cannot proceed / VCRUNTIME"
+
+Instal [VC++ redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) terbaru sesuai dengan arsitektur perangkat kamu. Jika kamu tidak yakin, 99% kemungkinan itu `x64`.
 
 ### Steam Global dan JP: masalah dengan GUI/overlay
 
 Overlay Steam kadang bisa mengganggu overlay Hachimi. Nonaktifkan salah satunya (disarankan Steam).
 
 Untuk menonaktifkan Hachimi: buka menu Hachimi dan centang kotak "Matikan overlay (GUI)" di tab "Umum", tekan simpan , lalu mulai ulang game.
-Jika kamu ingin mengaktifkan kembali overlay Hachimi, buka file konfigurasi Hachimi (config.json) dengan editor teks dan ubah nilai `disable_gui` dari `true`menjadi `false`, kemudian mulai ulang game. File konfigurasi ini terletak di folder hachimi dalam folder instalasi game.
+Jika kamu ingin mengaktifkan kembali overlay Hachimi, buka file konfigurasi Hachimi (config.json) dengan editor teks dan ubah nilai `disable_gui` dari `true` menjadi `false`, kemudian mulai ulang game. File konfigurasi ini terletak di folder `hachimi` dalam folder instalasi game.
 
 ### Steam Global: Macet di layar awal
 
@@ -106,7 +111,7 @@ Tampaknya ini merupakan bug pada game itu sendiri, yang dipicu lebih mudah oleh 
 
 ### DMM: Input terdeteksi di posisi yang salah pada layar setelah jendela diubah ukurannya
 
-Ini adalah masalah yang sudah diketahui pada Hachimi di versi game DMM Jepang (perbaikan segera hadir™). Untuk saat ini, jangan ubah ukuran jendela.
+Masalah ini sudah diperbaiki di Hachimi Edge v0.14.3. Perbarui ke versi terbaru.
 
 ### DMM: Tidak bisa memainkan game tertentu setelah menginstal Hachimi
 
@@ -115,7 +120,7 @@ Versi Hachimi untuk game DMM Jepang menggunakan pengalihan DotLocal DLL untuk me
 
 ### Input terdeteksi di posisi yang salah atau resolusi game tampak melebar saat dalam mode layar penuh
 
-::: peringatan
+::: warning PERINGATAN
 Pada klien Global, opsi `Mode Layar penuh` umumnya berfungsi sebagaimana mestinya, tetapi mengubah `Skala Resolusi` bisa merusak tampilan dan perilaku input bahkan pada resolusi **1080p**. Sangat disarankan untuk **membiarkan `Skala Resolusi` ke nilai default** di versi Global.
 :::
 
@@ -178,24 +183,24 @@ Pertama-tama, mungkin memang tidak ada pembaruan. Hal ini akan ditunjukkan denga
 
 ### Patching gagal
 
-- Pastikan kamu memilih file APK dasar atau file *split APK*, atau file XAPK gabungan. Kamu bisa menekan dan menahan untuk memilih beberapa file di pemilih file. Tempat yang disarankan untuk mendapatkan APK adalah [Qoopy](https://qoopy.leadrdrk.com/) (gunakan ID **6172**).
+- Pastikan kamu memilih file ***Base APK*** atau file ***split APK***, atau file **XAPK gabungan**. Kamu bisa menekan dan menahan untuk memilih beberapa file di pemilih file. Tempat yang disarankan untuk mendapatkan APK adalah [Qoopy](https://qoopy.leadrdrk.com/) (gunakan ID **6172**).
 
 - Jika perangkat kamu **Xiaomi/POCO** dengan **MIUI** (bukan **HyperOS**), coba matikan **Optimalisasi MIUI** di opsi pengembang/developer, Hal itu terkadang bisa mengganggu proses instalasi.
-    ::: peringatan
+    ::: warning PERINGATAN
     Mematikan **Optimalisasi MIUI** akan me-reset **semua izin aplikasi** dan bisa menyebabkan aplikasi kehilangan akses yang telah diberikan (penyimpanan, notifikasi, dll.)
     :::
 
 - Coba hapus cache **UmaPatcher Edge** :  
   *Tahan ikon aplikasi → info aplikasi → penyimpanan → Cache (jika ada) → hapus cache.*  
-  jika tidak bekerja, coba **unduh ulang UmaPatcher Edge** dan **impor *signing key*** lagi.
+  jika tidak bekerja, coba **unduh ulang UmaPatcher Edge** dan impor lagi ***signing key***.
 
-### Aplikasi tidak terpasang karena muncul error ketidakcocokan
+### Aplikasi tidak terpasang karena aplikasi tidak kompatibel
 
-::: peringatan
+::: warning PERINGATAN
 Langkah-langkah ini diperlukan untuk beberapa perangkat Samsung dan melibatkan penyambungan ponsel kamu ke PC. Langkah ini juga mungkin berfungsi pada perangkat Android lainnya.
 :::
 
-Masalah ini bisa terjadi ketika game telah di-uninstall tetapi masih tersisa di dalam Secure Folder. Ikuti langkah-langkah berikut untuk menghapus game sepenuhnya:
+Masalah ini bisa terjadi ketika game telah di-uninstall tetapi masih tersisa di dalam *Secure Folder*. Ikuti langkah-langkah berikut untuk menghapus game sepenuhnya:
 
 1. **Nyalakan USB Debugging** di opsi pengembang/developer.  
    jika tidak tau caranya, lihat [Panduan YouTube Short](https://www.youtube.com/shorts/p7DDuq56suU)
@@ -208,11 +213,11 @@ Masalah ini bisa terjadi ketika game telah di-uninstall tetapi masih tersisa di 
    Lihat perangkat kamu dan **Berikan izin USB debugging** saat diminta, kemudian jalankan perintah lagi untuk memastikan koneksi.  
    Seharusnya menampilkan sesuatu seperti `"ABCD1234EFGH" device` di Terminal.
    Jika tidak ada, lihat dibawah.
-1. Terakhir, ketik `adb uninstall jp.co.cygames.umamusume` dan tekan **Enter** untuk uninstall game.
+1. Terakhir, ketik `adb uninstall jp.co.cygames.umamusume` dan tekan ***Enter*** untuk uninstall game.
 
 #### Pemecahan masalah perangkat tidak sah/dikenali
 
-Jika mengetik `adb devices` dan menekan **Enter** muncul **"*unauthorized*"** daripada **"*device*"**:
+Jika mengetik `adb devices` dan menekan ***Enter*** muncul **"*unauthorized*"** daripada **"*device*"**:
 
 1. Di perangkat kamu, **matikan USB debugging**, kemudian **nyalakan kembali**.
 1. Hubungkan ulang perangkat dan **Berikan izin USB debugging** lagi saat diminta.
@@ -226,16 +231,22 @@ Kamu tidak bisa masuk ke versi game yang telah dipatch menggunakan akun Google P
 
 #### Jika perangkat di-root
 
- Pastikan koneksi kamu stabil dan perangkat lulus DEVICE_INTEGRITY pada server Play Integrity
+ Pastikan koneksi kamu stabil dan perangkat lulus **DEVICE_INTEGRITY** pada server Play Integrity
  (kamu bisa coba verifikasi dengan aplikasi [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) ). Jika lolos, sembunyikan root dari game menggunakan **DenyList bawaan Magisk** (aktifkan Enforce DenyList jika tidak berfungsi) seharusnya membuatnya berjalan. Alat lain seperti **Shamiko** juga mungkin berhasil.
 
 #### Jika perangkat tidak di-root
 
- Jika pesan kesalahan ini terus muncul di perangkat kamu, itu menandakan koneksi yang tidak stabil ke server Play Integrity, atau kamu perlu menggunakan VPN saat meluncurkan game. Lihat bagian [Communication error](#muncul-pesan-communication-error-saat-mencoba-memasuki-game) untuk detailnya.
+ Jika pesan kesalahan ini terus muncul di perangkat kamu, itu menandakan koneksi yang tidak stabil ke server Play Integrity, atau kamu perlu menggunakan **VPN** saat meluncurkan game. Lihat bagian [Communication error](#muncul-pesan-communication-error-saat-mencoba-memasuki-game) untuk detailnya.
 
 ### I/O error: Permission denied (os error 13)
 
-Hal ini bisa terjadi karena adanya pembatasan penyimpanan/*scoped storage* baru yang diperkenalkan di Android 10, yang membuat Hachimi gagal membuat direktori datanya. Untuk mengatasinya, buka pengelola file kamu, masuk ke Android/media, lalu buat folder bernama "jp.co.cygames.umamusume". Jalankan ulang game dan masalah seharusnya teratasi.
+Karena adanya sistem *scoped storage* baru yang ada di Android 10, Hachimi mungkin gagal membuat direktori datanya secara otomatis  
+
+1. Tutup game-nya.
+1. Buka manajer file dan arahkan ke `Android/media`.
+1. Buat folder bernama `jp.co.cygames.umamusume` jika belum ada.
+1. Di dalam folder yang baru dibuat tersebut, buat folder lain bernama `hachimi`.
+1. Jalankan ulang game.
 
 ### I/O error: File exists (os error 17)
 
@@ -243,7 +254,19 @@ Mulai ulang perangkat kamu dan coba jalankan game lagi. Jika kesalahan tetap mun
 
 ### *Crash* setelah dijalankan
 
-Hal ini mungkin diperlukan untuk beberapa perangkat dan emulator: buka pengelola file kamu dan arahkan ke Android/media. Buat folder bernama "jp.co.cygames.umamusume". Di dalam folder tersebut, buat folder bernama "hachimi". Terakhir, unduh [file config ini](https://files.leadrdrk.com/hachimi/android-compat/config.json) dan letakkan di dalam folder "hachimi" (pastikan namanya "config.json")
+:::warning PERINGATAN
+Ini **TIDAK** berkaitan dengan masalah *crash* yang terjadi pada Hachimi versi lama (v0.14.1).
+Lihat [panduan ini](faqs.md#bagaimana-saya-memperbarui-di-android) untuk memperbarui Hachimi.
+:::
+
+Ini mungkin diperlukan untuk beberapa perangkat Samsung dan emulator.
+
+1. Pertama-tama ikuti [os error 13](#io-error-permission-denied-os-error-13), tetapi jangan dulu menjalankan game.
+1. Unduh [File config ini](https://files.leadrdrk.com/hachimi/android-compat/config.json) kemudian masukkan ke folder `hachimi` (pastikan namanya `config.json`).
+
+### Pilihan terjemahan hilang saat setup pertama kali
+
+Lihat [os error 13](#io-error-permission-denied-os-error-13).
 
 ### Ketukan tidak pas
 
@@ -275,11 +298,19 @@ Jika selama proses patching kamu melihat pesan yang menyebutkan `libmain.so`, ka
 
 1. Pastikan Hachimi sudah terbaru.
 1. Paksa unduh ulang Hachimi di pengaturan UmaPatcher Edge, lalu lakukan patch lagi.
-1. Hapus data dan cache Umapatcher Edge.
-1. Instal ulang Umapatcher Edge.
+1. Hapus data dan cache UmaPatcher Edge.
+1. Instal ulang UmaPatcher Edge.
 1. Mulai ulang perangkat kamu ke mode pemulihan (*recovery mode*) dan hapus cache.
 <!-- Todo: How safe is the last one...? -->
 
 ## Emulator (termasuk Google Play Games)
 
 Game maupun Hachimi tidak mendukung emulator. Kamu bisa membuatnya berfungsi, tetapi itu sepenuhnya tanggung jawab kamu. Untuk bermain di PC, gunakan klien DMM atau Steam.
+
+## Masalah saya tidak ada di daftar ini
+
+Hapus instalan Hachimi menggunakan program penginstal (*installer*). Usahakan gunakan kembali *installer* yang kamu gunakan saat memasang versi saat ini, tapi versi terbaru seharusnya tetap bisa berfungsi.
+
+Jika kamu memiliki beberapa versi game yang terinstal, pastikan kamu menghapusnya dari jalur (*path*) yang benar. Kemudian, instal ulang Hachimi Edge terbaru.
+
+Jika cara tersebut tidak berhasil, kamu bisa bertanya di saluran `help/support` di [Discord Hachimi Project](https://discord.gg/hachimimod). Harap sebutkan server game, platform dan model perangkat kamu, serta jelaskan masalah kamu secara jelas dan cara apa saja yang sudah kamu coba.
