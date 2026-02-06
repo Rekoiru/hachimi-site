@@ -21,13 +21,13 @@ Menu bisa dibuka dengan menekan tombol atau kombinasi tombol. Ini berbeda untuk 
 - **Muat ulang konfig:** Memuat ulang file konfigurasi dari penyimpanan. Ini dilakukan secara otomatis oleh editor konfigurasi.
 - **Setup pertama kali:** Menjalankan wizard pengaturan awal. Kamu bisa mengubah repo terjemahan di sini.
 
-## Grafik
+## Grafis
 
 Di sini kamu bisa mengubah opsi grafis secara *real-time*.
 
 Perhatikan bahwa opsi ini tidak permanen dan akan direset saat game dimulai kembali. Untuk menerapkan opsi ini secara permanen, ubah langsung melalui Editor Konfig.
 
-## Terjemahan
+## Translasi
 
 - **Muat ulang data lokalisasi:** Ditujukan untuk penerjemah. Akan memuat ulang file terjemahan dari disk.
 - **Cek pembaruan:** Menjalankan pengecekan pembaruan data translasi.
