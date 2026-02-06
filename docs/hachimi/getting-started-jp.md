@@ -71,7 +71,7 @@ If you have the *unpatched* game installed, you must uninstall it first. The pat
 
 ::: tip
 On Xiaomi devices without HyperOS, we recommend the Shizuku option further down.
-You can also try disabling MIUI Optimizations before installing.
+You can also try disabling `MIUI Optimizations` before installing, but beware this will reset **all app permissions**.
 :::
 
 1. If you used non-Edge UmaPatcher before, open its settings page and **export the signing key**. Keep it safe, you might need it again later.
@@ -91,7 +91,7 @@ You can also try disabling MIUI Optimizations before installing.
 ⚠️ You'll need to repeat this process from step 4 whenever the game updates. You do **not** need to uninstall the game to update.
 
 <details>
-<summary class="collapsible-header-sub">Patch with Shizuku (alternative, might enable store)</summary>
+<summary id="shizuku" class="collapsible-header-sub">Patch with Shizuku (alternative, might enable store)</summary>
 
 UmaPatcher Edge can be installed with [Shizuku](https://github.com/RikkaApps/Shizuku/releases).
 This functions something like a "rootless direct install" and *could* circumvent *some* install issues.  

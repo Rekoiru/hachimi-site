@@ -192,7 +192,7 @@ If this message doesn't show, you're probably using a VPN to access the game. Tu
   You can tap and hold to select multiple files in the file picker.  
   The recommended place to get the APKs is [Qoopy](https://qoopy.leadrdrk.com/) (use ID **6172**).
 
-- If you're on a **Xiaomi/POCO** device running **MIUI** (not **HyperOS**), try disabling *MIUI Optimizations* from Developer Options, it can sometimes interfere with the installation.
+- If you're on a **Xiaomi/POCO** device running **MIUI** (not **HyperOS**), try the [Shizuku install method](getting-started-jp#shizuku) or disabling *MIUI Optimizations* from Developer Options, it can sometimes interfere with the installation.
     ::: warning
     Disabling **MIUI Optimizations** will reset **all app permissions** and may cause apps to lose granted access (storage, notifications, etc.).
     :::
