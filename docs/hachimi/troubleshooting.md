@@ -8,10 +8,29 @@ Known issues and their solutions are listed here. Check the General section firs
 
 ### "Communication error" messages when attempting to start the game
 
-- After launching, most users do not need a VPN to connect to the game itself, and it can cause issues instead. Check that you have turned it off or use split tunneling (if supported). **In some regions, you *do* need a VPN to connect**.
-  - You can check by accessing the [official API website](https://api-umamusume.cygames.jp). If you get `404 Not Found`, you don't need a VPN. `Access Denied` means you do.
-  - See [this guide](https://gametora.com/umamusume/playing-on-dmm) to get started with VPN, and [this guide](https://docs.google.com/document/d/18m9wHT4_AIh5ePKSo_ZYH9nSgNh492YQx76bIxmgqyc/edit?tab=t.0#heading=h.7cq4imx1gkqf) for an alternative VPN solution.
-- If both the **Global Steam** and **Japanese DMM** version of the game are installed, [try the steps for the Error 501 issue](#error-501).
+Most users do **not** need a VPN to connect to the game itself (only DMM, or making a Steam account), and it can cause issues instead. Check that your VPN is off, or use split tunneling if supported by your VPN client.
+**Some regions or ISPs *do* require a VPN to connect to the game**.
+
+For the JP game version, you can check by accessing the [official API website](https://api-umamusume.cygames.jp). If you get `404 Not Found`, you **don't** need a VPN. `Access Denied` means you do. Other results likely point to an issue with your network or ISP and we can't help you with that.
+
+See [GameTora's guide](https://gametora.com/umamusume/playing-on-dmm) to get started with VPN, and the [OpenVPN Google Doc](https://docs.google.com/document/d/18m9wHT4_AIh5ePKSo_ZYH9nSgNh492YQx76bIxmgqyc/edit?tab=t.0#heading=h.7cq4imx1gkqf) for an alternative VPN solution.
+
+::: details I need a VPN for the game.
+If you decide to use OpenVPN (with UmaVPN.top), it is recommended to use the v2.7 client as it supports split tunneling (select it when downloading the profile from UmaVPN). Earlier versions require the pinning script in the guide above, which is prone to update issues and does not include newer domains.
+
+Some VPNs (notably VPNGate, used by UmaVPN) only support IPv4. You can try [unbinding IPv6 from the adapter you use](https://networking.grok.lsu.edu/article.aspx?articleid=17573), but **please note that this might cause other issues**, possibly in the future.
+A safer method should be to [prefer IPv4](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-ipv6-in-windows#use-registry-key-to-configure-ipv6), but it's more involved and its helpfulness is currently untested.
+
+Your client or configuration could also have general issues with split tunneling. Try turning it off in that case.
+:::
+
+::: details Split tunneling note (DMM or general-use VPN).
+Depending on how you configured your VPN, either exclude the game or include only DMM.
+
+If using UmaVPN.top, the pinning script only affects the game (useless for DMM) and the new `split-tunneling` option for profiles includes both. For the latter, you can open the profile in a text editor, scroll down to the `Route` section, and remove the non-DMM domains. On Android, you might also be able to edit this through the OpenVPN GUI.
+:::
+
+If both the **Global Steam** and **Japanese DMM** version of the game are installed, [try the steps for the Error 501 issue](#error-501).
 
 ### Physics (hair, clothing, etc.) are stiff when running at 60+ FPS
 
