@@ -26,7 +26,8 @@ No. Apple devices are very tightly locked down, making it very difficult to crea
 
 ## How do I uninstall Hachimi?
 
-The installer has an uninstall option. If you no longer have it, you can download the latest one and use that.
+**Windows**: The installer has an uninstall option. If you no longer have it, you can download the latest one and use that.  
+**Android**: You will have to uninstall the patched game and install the original one normally.
 
 ## Will I get banned for using Hachimi? Have there been bans?
 
