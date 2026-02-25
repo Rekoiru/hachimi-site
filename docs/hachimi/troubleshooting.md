@@ -104,7 +104,8 @@ If you're already using Edge, try reinstalling the latest version.
 ### The game won't start after installing Hachimi
 
 ::: warning
-Some kernel-level anti-cheats (such as Vanguard, used in Valorant and League of Legends) prevent Hachimi from launching the game correctly. Make sure they are not running on your computer, then try again.
+Some kernel-level anti-cheats (eg. Vanguard) can prevent the game from launching with Hachimi Edge.
+Make sure these are actively running on your computer, then try again.
 :::
 
 - Make sure you installed the correct version of Hachimi for your game version (Japanese or Other). You can find the right one on the [getting started](getting-started) page.
@@ -147,10 +148,10 @@ This issue has been fixed in Hachimi Edge v0.14.3. Update to the latest version.
 
 ### DMM: Can't play certain games after installing Hachimi
 
-The version of Hachimi for the JP DMM version of the game uses DotLocal DLL redirection to load, which some anti-cheats (such as Vanguard, used in Valorant and League of Legends) hate seeing enabled.
+The loading method Hachimi uses for the **DMM** version of the game is DotLocal DLL Redirection, which causes issues with some anti-cheats (eg. Vanguard).
 You need to disable DLL redirection whenever you want to play an affected game.
-[DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/) is a small program that lets you quickly toggle DotLocal DLL redirection.
-Alternatively, play the JP Steam version.
+[DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/) is a small program that lets you quickly toggle it.
+Alternatively, play the **JP Steam** version.
 
 ### Input registering at the wrong spots or game resolution appears stretched in full screen mode
 
