@@ -32,10 +32,6 @@ If using UmaVPN.top, the pinning script only affects the game (useless for DMM) 
 
 If both the **Global Steam** and **Japanese DMM** version of the game are installed, [try the steps for the Error 501 issue](#error-501).
 
-### Physics (hair, clothing, etc.) are stiff when running at 60+ FPS
-
-Change the "Physics update mode" setting to "Mode60FPS". This setting is available in the Config Editor in the "Gameplay" tab.
-
 ### Corrupted/jumbled textures or text
 
 ::: tip
@@ -70,27 +66,31 @@ Don't update your translations until you know the source has updated. You can al
 
 </small>
 
-### Something isn't translated
+### Physics (hair, clothing, etc.) are stiff when running at 60+ FPS
 
-Translations are provided by volunteers in the community offering up their time. Many things are not yet done. Check in with your chosen translation source and try to support its translators.
-
-### Lyrics switch between language randomly
-
-This issue has been fixed in Hachimi Edge v0.15.1. Update to the latest version.
+Change the "Physics update mode" setting to "Mode60FPS". This setting is available in the Config Editor in the "Gameplay" tab.
 
 ### Game won't load beyond the splash screen
 
 If the game **gets stuck** on the splash screen, see [Error 501](#error-501).  
 If you can see the splash screen but the game crashes afterward, see [The game won't start after installing Hachimi](#the-game-wont-start-after-installing-hachimi).
 
-### "Account resricted" message
-
-This means you are banned.
-
 ### The in-game background is shrunk / White border
 
 Open Hachimi Menu -> Config Editor and reset `virtual resolution multiplier` to 1.
-If that doen't help, try adjusting it until it looks ok.
+If that doesn't help, try adjusting it until it looks ok.
+
+### Lyrics switch between language randomly
+
+This issue has been fixed in Hachimi Edge v0.15.1. Update to the latest version.
+
+### Something isn't translated
+
+Translations are provided by volunteers in the community offering up their time. Many things are not yet done. Check in with your chosen translation source and try to support its translators.
+
+### "Account restricted" message
+
+This means you are banned.
 
 ## Windows
 
@@ -126,11 +126,31 @@ Make sure these are actively running on your computer, then try again.
 If Hachimi Edge worked fine before, this likely means the game updated and replaced some modified files.
 Simply reinstall Hachimi Edge.
 
-### Installer: "Code execution cannot proceed / VCRUNTIME" error
+### Input registering at the wrong spot / Game appears stretched in full screen mode
 
-Install the latest [VC++ redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) matching your device architecture. If you're unsure, it's 99% likely to be `x64`.
+::: warning
+On the Global client, changing `Resolution scaling` can break rendering and input behavior even at 1080p resolution.  
+It's strongly recommended to **keep `Resolution scaling` at its default value** on the Global version.
+:::
 
-### Steam Global and JP: Issues with GUI/overlay
+::: info
+If this is happening after resizing the window on DMM, this issue has been fixed in Hachimi Edge v0.14.3. Update to the latest version.
+:::
+
+- Ensure that the `Full screen mode` and `Resolution scaling` options are set correctly.  
+- If your screen resolution is higher than **1080p**, try selecting a different `Resolution scaling` value.  
+- If your monitor's aspect ratio is not **16:9**, set `Full screen mode` to **Exclusive** instead.
+
+### Not receiving translation updates
+
+First of all, there might not be updates. This should be indicated by a "No updates found" message.
+If this message doesn't show, you're probably using a VPN to access the game. Turn it off during the update phase.
+
+### Game stutters
+
+Make sure you don't have auto-translate enabled in the Hachimi settings. This only works when you have a translation server set up correctly, and will cause performance problems even then.
+
+### Steam: Issues with GUI/overlay
 
 The Steam overlay can sometimes interfere with Hachimi's overlay. Disable one of them (Steam recommended).
 
@@ -141,10 +161,6 @@ When you want to re-enable Hachimi's overlay, open Hachimi's config file (config
 
 This seems to be a bug in the game itself, which Hachimi causes to trigger much more easily. Use `alt` + `enter` to toggle between fullscreen and windowed. This should let you continue. An official fix is presumably coming.
 
-### DMM: Input registering at the wrong spot on the screen after the window is resized
-
-This issue has been fixed in Hachimi Edge v0.14.3. Update to the latest version.
-
 ### DMM: Can't play certain games after installing Hachimi
 
 The loading method Hachimi uses for the **DMM** version of the game is DotLocal DLL Redirection, which causes issues with some anti-cheats (eg. Vanguard).
@@ -152,24 +168,26 @@ You need to disable DLL redirection whenever you want to play an affected game.
 [DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/) is a small program that lets you quickly toggle it.
 Alternatively, play the **JP Steam** version.
 
-### Input registering at the wrong spots or game resolution appears stretched in full screen mode
+### First time setup: Repo selection stuck loading or shows an error
 
-::: warning
-On the Global client, the `Full screen mode` option generally works as expected, but changing `Resolution scaling` can break rendering and input behavior even at **1080p** resolution.  
-It's strongly recommended to **keep `Resolution scaling` at its default value** on the Global version.
-:::
+This probably means you're using a VPN to access the game itself. Temporarily turn it off until the setup is over and translations are downloaded.  
+See also the [related issue below](#not-receiving-translation-updates).
 
-- Ensure that the `Full screen mode` and `Resolution scaling` options are set correctly.  
-- If your screen resolution is higher than **1080p**, try selecting a different `Resolution scaling` value.  
-- If your monitor's aspect ratio is not **16:9**, set `Full screen mode` to **Exclusive** instead.
+### Installer: "Code execution cannot proceed / VCRUNTIME" error
+
+Install the latest [VC++ redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) matching your device architecture. If you're unsure, it's 99% likely to be `x64`.
+
+### Installer: I/O error: The system cannot find the file specified (os error 2)
+
+This is likely to occur on global due to some file name differences not yet accounted for. It shouldn't affect Hachimi and can be safely ignored.
+
+### Installer: I/O error: Access is denied (os error 5)
+
+Something is using files you're trying to modify. Likely means you still have the game open while trying to (un)install Hachimi.
 
 ### Sound issues
 
 This is a bug in the game, not Hachimi. Some users can turn on Windows Sonic without adverse effects to fix it.
-
-### Game stutters
-
-Make sure you don't have auto-translate enabled in the Hachimi settings. This only works when you have a translation server set up correctly, and will cause performance problems even then.
 
 ### Error 501
 
@@ -197,25 +215,7 @@ Global uses "Umamusume" while JP uses "umamusume".
 
 ### Global Steam and JP DMM versions constantly ask to redownload data
 
-See [Error 501](#error-501) above.
-
-### I/O error: Access is denied (os error 5)
-
-Something is using files you're trying to modify. Likely means you still have the game open while trying to (un)install Hachimi.
-
-### Installer I/O error: The system cannot find the file specified (os error 2)
-
-This is likely to occur on global due to some file name differences not yet accounted for. It shouldn't affect Hachimi and can be safely ignored.
-
-### First time setup: Repo selection stuck loading or shows an error
-
-This probably means you're using a VPN to access the game itself. Temporarily turn it off until the setup is over and translations are downloaded.  
-See also the [related issue below](#not-receiving-translation-updates).
-
-### Not receiving translation updates
-
-First of all, there might not be updates. This should be indicated by a "No updates found" message.
-If this message doesn't show, you're probably using a VPN to access the game. Turn it off during the update phase.
+See [Error 501](#error-501).
 
 ## Android
 
@@ -234,7 +234,7 @@ If this message doesn't show, you're probably using a VPN to access the game. Tu
   *Hold the app icon → App info → Storage → Cache (if applicable) → Clear cache.*  
   If that doesn't work, try **redownloading UmaPatcher Edge** and **importing the signing key** again.
 
-### App not installed as app isn't compatible error
+### "App not installed as app isn't compatible" error
 
 ::: warning
 These steps are required for some Samsung devices and involve connecting your phone to a PC. They may also work for other Android devices.
@@ -262,24 +262,6 @@ If typing `adb devices` and pressing **Enter** shows **"unauthorized"** instead 
 1. On your device, **disable USB debugging**, then **re-enable** it.
 1. Reconnect the device and **grant the USB debugging permission** again when prompted.
 1. Repeat the relevant steps above (usually steps 5–7).
-
-### Cannot log in via a Google Play account
-
-You cannot log in to the patched version of the game using a Google Play account and must use a Data Link password instead.
-If you have a Data Link password already created, log in to that account from the title screen (☰ > Data Link).
-If you *don't* have a Data Link password, you will need to uninstall the patched version of the game, reinstall the unpatched version of the game, log in via your Google Play account, then create a Data Link password.
-After that, you can repeat the patching process and then log in using the created Data Link password.
-Alternatively, you may log in to a Cygames ID to link your account data.
-
-### You are not permitted to play on this device (この端末でのプレイは許可されていません) error
-
-#### Your device is rooted
-
-Make sure your connection is stable and that the device is passing at least **DEVICE_INTEGRITY** on the Play Integrity servers (you can verify this using the [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) app). If it passes, hiding root from the game using **Magisk's built-in DenyList** (enable *Enforce DenyList* if it doesn't work) should make it work. Other tools such as **Shamiko** may also do the trick.
-
-#### Your device is not rooted
-
-If this error message continues to show on your device, it may indicate an unstable connection to the Play Integrity servers, or that you need to use a **VPN** when launching the game. See the [Communication error](#communication-error-messages-when-attempting-to-start-the-game) section for more details.
 
 ### I/O error: Permission denied (os error 13)
 
@@ -311,11 +293,11 @@ This might be needed for some Samsung devices and emulators.
 
 See [os error 13](#io-error-permission-denied-os-error-13).
 
-### Mismatched taps
+### Taps are offset
 
 Open Hachimi's menu -> Config Editor and play with the virtual resolution multiplier to find which value works best.
 
-### Tapping doesn't register, or causes the game to crash or freeze
+### Taps don't register, or cause the game to crash or freeze
 
 This issue has been fixed in Hachimi Edge v0.15.1. Make sure you have [updated](faqs.md#how-do-i-update-on-android).
 
@@ -346,12 +328,31 @@ If during patching you see a message mentioning `libmain.so` you can try, in ord
 1. Restart your device into recovery mode and wipe the cache.
 <!-- Todo: How safe is the last one...? -->
 
+### Cannot log in via a Google Play account
+
+You cannot log in to the patched version of the game using a Google Play account and must use a Data Link password instead.
+If you have a Data Link password already created, log in to that account from the title screen (☰ > Data Link).
+
+If you *don't* have a Data Link password, you will need to uninstall the patched version of the game, reinstall the unpatched version of the game, log in via your Google Play account, then create a Data Link password.
+After that, you can repeat the patching process and then log in using the created Data Link password.
+Alternatively, you may log in to a Cygames ID to link your account data.
+
+### You are not permitted to play on this device (この端末でのプレイは許可されていません) error
+
+#### Your device is rooted
+
+Make sure your connection is stable and that the device is passing at least **DEVICE_INTEGRITY** on the Play Integrity servers (you can verify this using the [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) app). If it passes, hiding root from the game using **Magisk's built-in DenyList** (enable *Enforce DenyList* if it doesn't work) should make it work. Other tools such as **Shamiko** may also do the trick.
+
+#### Your device is not rooted
+
+If this error message continues to show on your device, it may indicate an unstable connection to the Play Integrity servers, or that you need to use a **VPN** when launching the game. See the [Communication error](#communication-error-messages-when-attempting-to-start-the-game) section for more details.
+
 ## Emulators (incl. Google Play Games)
 
 Neither the game nor Hachimi support emulators. You can get them to work, but you're on your own. To play on PC, use the DMM or Steam client.
 
 ## My issue isn't listed on this page
 
-Uninstall Hachmimi using the installer. Try to use the one you installed your current version with, but the latest one should work just fine.
+Uninstall Hachimi using the installer. Try to use the one you installed your current version with, but the latest one should work just fine.
 If you have multiple game versions installed, make sure you uninstall from the right path. Then reinstall latest Hachimi Edge.
 If that doesn't work, you can ask in the `help/support` channel on the [Hachimi Project Discord](https://discord.gg/hachimimod). Please state your game server, device platform and model, and clearly explain your issue and what you have tried.
