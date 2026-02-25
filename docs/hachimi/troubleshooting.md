@@ -221,18 +221,20 @@ See [Error 501](#error-501).
 
 ### Patching failed
 
-- Make sure you selected both the **base** and **split APK** files, or the combined **XAPK** file.
-  You can tap and hold to select multiple files in the file picker.  
-  The recommended place to get the APKs is [Qoopy](https://qoopy.leadrdrk.com/) (use ID **6172**).
+::: tip Just in case
+If you don't have a signing key saved yet, export it from UmaPatcher's settings first.
+:::
 
+- Make sure you selected both the **base and split APK** files, or the **single XAPK** file.
+  Tap and hold to select multiple files in the file picker.
+  - We recommended downloading APKs from [Qoopy](https://qoopy.leadrdrk.com/) (use ID **6172**).
+- Close UmaPatcher Edge and clear its app cache & data from Android's `App info → Storage`.
+- Redownload and reinstall UmaPatcher Edge, and **import your signing key** again.
+- If you see `kotlinx` mentioned in the installer log, use UmaPatcher's `Save patched file` method and install the resulting file using [SAI](https://github.com/aefyr/sai/releases).
 - If you're on a **Xiaomi/POCO** device running **MIUI** (not **HyperOS**), try the [Shizuku install method](getting-started-jp#shizuku) or disabling *MIUI Optimizations* from Developer Options, it can sometimes interfere with the installation.
     ::: warning
     Disabling **MIUI Optimizations** will reset **all app permissions** and may cause apps to lose granted access (storage, notifications, etc.).
     :::
-
-- Try clearing the **UmaPatcher Edge** cache:  
-  *Hold the app icon → App info → Storage → Cache (if applicable) → Clear cache.*  
-  If that doesn't work, try **redownloading UmaPatcher Edge** and **importing the signing key** again.
 
 ### "App not installed as app isn't compatible" error
 
