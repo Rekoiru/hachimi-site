@@ -38,6 +38,7 @@ Only add the file extensions if you see them on the originals. Windows can hide 
 1. If installing on JP (skip on Global):
     1. Download [Ferns' `FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney).
     1. Rename it to `UmamusumePrettyDerby_Jpn.exe` and put it in the game install folder, overwriting the original.
+    1. ⚠️ Keep this file around, you might need to repeat the overwrite after game updates (the game will stop launching) due to the original .exe being restored.
 1. Continue with [First Time Setup](getting-started#first-time-setup).
 
 ### DMM
