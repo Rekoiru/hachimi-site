@@ -14,14 +14,14 @@ hero:
       text: Get Started
       link: /docs/hachimi/getting-started
     - theme: alt
-      text: Discord
-      link: https://discord.gg/hachimimod
-    - theme: alt
       text: FAQ
       link: /docs/hachimi/faqs
     - theme: alt
       text: Troubleshooting
       link: /docs/hachimi/troubleshooting
+    - theme: alt
+      text: Discord
+      link: https://discord.gg/hachimimod
     - theme: alt
       text: Credits
       link: /credits
