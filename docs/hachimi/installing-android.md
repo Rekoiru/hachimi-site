@@ -51,16 +51,9 @@ UmaPatcher Edge can be installed with [Shizuku](https://github.com/RikkaApps/Shi
 This functions something like a "rootless direct install" and *could* circumvent *some* install issues.  
 If you don't see this option, update UmaPatcher to the latest version.
 
-1. Familiarize yourself with the normal guide above first.
 1. Install [Shizuku](https://github.com/RikkaApps/Shizuku/releases).
-1. Go to `Settings > About phone` and tap `Build number` 5 times, or until you get the popup.
-1. Go back to the main system settings to open `Developer options` or search for it.
-1. Enable it (`Use developer options`), then find and enable `Wireless debugging`.
-    - You might need to turn `USB debugging` on as well if this doesn't work on its own.
-1. Tap the setting name to open detailed wireless debugging settings.
-1. Select `Pair devices with pairing code` and input the code into the Shizuku notification.
-1. Open Shizuku's main app and start it.
-1. Now UmaPatcher Edge's install options should show the Shizuku method as `available`.
+1. Follow the [Shizuku activation guide](https://shizuku.rikka.app/guide/setup/) to start Shizuku.
+1. Follow the normal UmaPatcher Edge install guide above, but select **Shizuku Method** at step 7, it should show as `available` now.
 1. When done, it is recommended to stop Shizuku and disable wireless debugging again.
 :::
 
