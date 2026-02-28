@@ -239,8 +239,8 @@ See [Error 501](#error-501).
 
 ### "App not installed as app isn't compatible" error
 
-::: warning
-These steps are required for some Samsung devices and involve connecting your phone to a PC. They may also work for other Android devices.
+::: info
+These steps are required for some Samsung devices and involve connecting your phone to a PC. They **might** also work for other Android devices.
 :::
 
 This issue can occur when the game has been *uninstalled* but still remains inside a **Secure Folder**. Follow these steps to completely remove the game:
