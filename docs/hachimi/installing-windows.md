@@ -21,9 +21,10 @@ After that, you can just uninstall Hachimi as normal.
     - Global in particular might not be auto-detected.
 1. Click Install.
     - The first time, you might be asked to enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You must RESTART (not shutdown) your computer afterwards.**
-1. Continue with [First Time Setup](getting-started#first-time-setup).
 
 ⚠️ You might need to repeat the install after game updates (the game will stop launching) due to modified files being replaced.
+
+➡ Continue with [First Time Setup](getting-started#first-time-setup).
 
 ## Manual install
 
@@ -39,7 +40,8 @@ Only add the file extensions if you see them on the originals. Windows can hide 
     1. Download [Ferns' `FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney).
     1. Rename it to `UmamusumePrettyDerby_Jpn.exe` and put it in the game install folder, overwriting the original.
     1. ⚠️ Keep this file around, you might need to repeat the overwrite after game updates (the game will stop launching) due to the original .exe being restored.
-1. Continue with [First Time Setup](getting-started#first-time-setup).
+
+➡ Continue with [First Time Setup](getting-started#first-time-setup).
 
 ### DMM
 
@@ -48,4 +50,5 @@ Only add the file extensions if you see them on the originals. Windows can hide 
 1. In the [game install folder](faqs#how-do-i-find-the-game-install-folder), create a new folder named `umamusume.exe.local` and move the downloaded DLL file there. Rename it to `UnityPlayer.dll`.
 1. Download the latest `cellar.dll` from the [Cellar Releases page](https://github.com/Hachimi-Hachimi/Cellar/releases).
 1. Move it to `umamusume.exe.local` and rename it to `apphelp.dll`.
-1. Continue with [First Time Setup](getting-started#first-time-setup).
+
+➡ Continue with [First Time Setup](getting-started#first-time-setup).

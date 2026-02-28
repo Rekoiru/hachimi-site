@@ -226,10 +226,6 @@ See [Error 501](#error-501).
 
 ### Patching failed
 
-::: tip Just in case
-If you don't have a signing key saved yet, export it from UmaPatcher's settings first.
-:::
-
 - Make sure you selected both the **base and split APK** files, or the **single XAPK** file.
   Tap and hold to select multiple files in the file picker.
   - We recommended downloading APKs from [Qoopy](https://qoopy.leadrdrk.com/) (use ID **6172**).

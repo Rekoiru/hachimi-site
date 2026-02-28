@@ -42,9 +42,16 @@ UmaPatcher is an installer tool that automates the APK patching. It downloads th
 1. (*Once only*) If migrating, import the signing key you exported in step 1.
 1. Choose **Normal install**. Select the game APK file(s) that you have downloaded.
 1. Tap on Patch to start the patching and installation process.
-1. Continue with [First Time Setup](getting-started#first-time-setup).
+1. (*Once only*) After it successfully completes, if you don't have a saved key yet, export your signing key from UmaPatcher Edge's settings.
+   Keep it safe! You will likely need it again later for troubleshooting.
 
 ⚠️ You'll need to repeat this process from step 4 whenever the game updates. You do **not** need to uninstall the game to update.
+
+::: warning Do not share signing keys or use other's pre-patched APKs!
+These are unique per device and written into the APK. They **will** cause issues updating.
+:::
+
+➡ Continue with [First Time Setup](getting-started#first-time-setup).
 
 ::: details Using Shizuku (alternative, might enable store)
 UmaPatcher Edge can be installed with [Shizuku](https://github.com/RikkaApps/Shizuku/releases).
@@ -72,4 +79,5 @@ You **will still** need to patch the game with UmaPatcher again whenever the gam
 1. Rename the `libmain.so` file in each of the folders inside `lib` to `libmain_orig.so`.
 1. Copy the proxy libraries to their corresponding folders (e.g. `libmain-arm64-v8a.so` goes to `lib/arm64-v8a`). Rename them to `libmain.so`.
 1. Build the APK file and install it.
-1. Continue with [First Time Setup](getting-started#first-time-setup).
+
+➡ Continue with [First Time Setup](getting-started#first-time-setup).
