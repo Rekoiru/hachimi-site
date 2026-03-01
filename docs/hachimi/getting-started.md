@@ -67,10 +67,11 @@ Upon launching the game for the first time after installing Hachimi Edge, you sh
 ![First Time Setup](/assets/first-time-setup.jpg)
 
 ::: details I don't see it!
-If you are upgrading to Edge for the first time, open it from the Hachimi Edge menu.
-Not doing so will result in outdated translations and corrupted texture issues.
+**If you are migrating to Edge**:  
+You likely didn't uninstall first. This can leave outdated values in your configuration. Open this setup from the Hachimi Edge menu and make sure the Meta URL is `https://gitlab.com/umatl/hachimi-meta/-/raw/main/meta.json` (Unless you are **knowingly** using a different one). Not doing so will result in outdated translations and corrupted texture issues.
 
-Otherwise, Hachimi Edge was not installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting).
+**Otherwise**:  
+Hachimi Edge was not installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting).
 :::
 
 Tap on Next and choose your preferred translation source, then tap on Done to save your configuration and start the update check.
